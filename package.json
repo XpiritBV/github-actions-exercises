@@ -31,7 +31,10 @@
     "mongoose": "^5.12.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "puppeteer": "^13.0.0",
+    "webpack": "^5.67.0",
+    "electron": "^16.0.4"
   },
   "devDependencies": {
     "chai": "^4.3.4",
