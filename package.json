@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "build": "npm ci",
-    "test": "mocha test/todoTests.js --reporter mocha-json-reporter" 
+    "test": "mocha test/todoTests.js --reporter json > test-results.json" 
   },
   "repository": {
     "type": "git",
