@@ -14,6 +14,9 @@ jobs:
       matrix:
         node-version: [16.x, 18.x, 20.x]
 
+    permissions:
+      pull-requests: write # needed for the test reporter check
+
     steps:
     - uses: actions/checkout@v3
 
