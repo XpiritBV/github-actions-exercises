@@ -1,0 +1,19 @@
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": { 
+      "VARIANT": "14"
+    }
+  },
+  "runArgs": [ "-u", "node" ],
+  "settings": { 
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint"
+  ],
+  "postCreateCommand": "npm install",
+  "forwardPorts": [ 3000 ]
+}
