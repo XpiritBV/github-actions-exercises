@@ -5,8 +5,8 @@ class TodoController {
         this.todos = [];
     }
 
-    createTodo(description) {
-        const newTodo = new TodoModel(description);
+    createTodo(id, description, completed) {
+        const newTodo = new TodoModel(id, description, completed);
         this.todos.push(newTodo);
         return newTodo;
     }

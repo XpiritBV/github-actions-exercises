@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
+    "build": "npm ci",
     "test": "mocha test/todoTests.js"
   },
   "repository": {
