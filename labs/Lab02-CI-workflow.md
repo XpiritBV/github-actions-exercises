@@ -61,3 +61,24 @@ The node.js runtime is used to execute the build and test scripts. You can speci
 
 > [!IMPORTANT]
 > The goal is to have a successful build, and the workflow should use the `actions/setup-node` action with a specifc version of the node.js runtime. Recently GitHub added the caching mechanisme by default to the setup-* actions, so it does the same thing as the `actions/cache` action can achieve. This means that you could remove the `actions/cache` action from the workflow as it is no longer needed.
+
+# 6. Show test results in the workflow
+Showing the test results in the workflow run is a great way to get feedback on the quality of the code. You can use the `dorny/test-reporter` action to show the test results in the workflow. This action supports multiple test reporters, including the `mocha-json` reporter that is used in this application.
+
+**Example:**
+```yaml
+- name: Test Report
+      uses: dorny/test-reporter@v1
+      if: success() || failure()        # run this step even if previous step failed
+      with:
+        name: "Mocha Tests ${{ matrix.node-version }}"              # Name of the check run which will be created
+        path: test-results.json # Path to test results
+        reporter: mocha-json            # Format of test results
+```
+
+> [!WARNING]
+> The action will create annotations on the workflow run (and the PR if that is the context) to show the results. This is using the `checks` API and there for needs permissions to create those checks. Add all the permissions in one go to prevent issues with the action. (Bonus points if you can figure out which permissions are needed and send in a PR to this repo 😉).
+```yaml 
+    permissions:
+      write-all # needed for the test reporter check
+```
