@@ -1,3 +1,4 @@
+# use this workflow as an example for Lab 2 if you are stuck / need inspiration
 name: Node.js CI
 
 on:
@@ -12,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [12.x, 14.x, 16.x]
 
     permissions:
       write-all # needed for the test reporter check
@@ -35,8 +36,8 @@ jobs:
 
     - name: Test Report
       uses: dorny/test-reporter@v1
-      if: success() || failure()        # run this step even if previous step failed
+      if: success() || failure() # run this step even if previous step failed
       with:
-        name: "Mocha Tests ${{ matrix.node-version }}"              # Name of the check run which will be created
+        name: "Mocha Tests ${{ matrix.node-version }}" # Name of the check run which will be created
         path: test-results.json # Path to test results
-        reporter: mocha-json            # Format of test results
+        reporter: mocha-json    # Format of test results
