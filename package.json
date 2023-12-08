@@ -1,0 +1,46 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "A Node.js project with a CRUD screen for TODO items",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "npm ci",
+    "test": "mocha test/todoTests.js --reporter json > test-results.json" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/my-node-app.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "crud",
+    "todo"
+  ],
+  "author": "Your Name",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/yourusername/my-node-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/my-node-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "electron": "^16.0.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
+    "puppeteer": "^13.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^3.0.1",
+    "webpack": "^5.67.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "jest-junit": "^16.0.0",
+    "mocha": "^10.2.0",
+    "mocha-json-reporter": "^1.0.0-1",
+    "nodemon": "^2.0.7"
+  }
+}
