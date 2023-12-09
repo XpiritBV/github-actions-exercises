@@ -11,7 +11,7 @@ Create a workflow that adds a comment on an issue, using the three different set
 
 > [!TIP] Notice which user get attributed to have made the comment. Is it the Author of the issue/PR, or somthing else?
 
-> ![IMPORTANT] The goal is to have a workflow that triggers when someone creates an issue or pull request. The workflow should add a comment to the issue/PR conversation.
+> [!IMPORTANT] The goal is to have a workflow that triggers when someone creates an issue or pull request. The workflow should add a comment to the issue/PR conversation.
 
 # 1. Use notifications effectively
 A user only gets a notification when they actually follow the repository (more info in [this explainer video](https://youtu.be/eIWzKR465M0)). When using IssueOps, you can automate tagging a user or a team to make sure they get the notifications. 
