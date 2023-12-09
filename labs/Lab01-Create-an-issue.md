@@ -22,7 +22,10 @@ Create a workflow that adds a comment on an issue, using the three different set
 A user only gets a notification when they actually follow the repository (more info in [this explainer video](https://youtu.be/eIWzKR465M0)). When using IssueOps, you can automate tagging a user or a team to make sure they get the notifications. 
 
 1. Tag yourself when an issue or pull request is created. Here is [an action](https://github.com/marketplace/actions/issue-comment-tag) from the marketplace that can help.  
+1. Look at the notification options when you are at the root of the repository (Code tab). Click on the `Watch` button and look at the options.
+1. Check your notification settings/subscriptions, by going to the notification page and in the lower left hand part of the list, follow the links
 
+Notifications can be hard to get a grasp on at first. After knowing how this works, and tweaking your settings, things can be pretty different. Learn how to harness the power of notifications with this [explainer video on YouTube](https://youtu.be/eIWzKR465M0).
 
 > ![IMPORTANT]
 > The goal is to have a workflow that triggers when someone creates an issue or pull request. The workflow should tag you in the issue/PR conversation which means you get a notification for this issue.
