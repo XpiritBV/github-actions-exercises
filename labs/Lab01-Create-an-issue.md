@@ -27,5 +27,5 @@ A user only gets a notification when they actually follow the repository (more i
 
 Notifications can be hard to get a grasp on at first. After knowing how this works, and tweaking your settings, things can be pretty different. Learn how to harness the power of notifications with this [explainer video on YouTube](https://youtu.be/eIWzKR465M0).
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > The goal is to have a workflow that triggers when someone creates an issue or pull request. The workflow should tag you in the issue/PR conversation which means you get a notification for this issue.
