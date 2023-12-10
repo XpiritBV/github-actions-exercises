@@ -1,6 +1,27 @@
-# My Node App
+# Introduction
+This repo's is created as extra labs for the GitHub Actions Training for the Actions Certification Exam by Xebia. You can find the trainings here: [xebia.com/academy](https://xebia.com/academy/en/discipline/github/). With the labs in this repo (check the `labs` folder) you can practice and get hands-on for the exam to really let the information from the training sync in. Knowing where certain things in the UI are located, and how to solve an example question from real world experience is a great way to prepare for the exam.
 
-This is a simple Node.js application that provides a CRUD interface for maintaining a list of TODO items. It is designed to run in GitHub Codespaces.
+## Labs
+Here is an overview of the labs:
+- [Lab 1: Create a workflow that comments on an issue](labs/Lab01-Create-an-issue.md)
+  - Creating an issue comment using the GitHub CLI
+  - Creating an issue comment using the `actions/github-script@v6` action
+  - Creating an issue comment only when the issue is labeled with `bug`
+  - Using notifications effectively
+- [Lab 2: Create a CI workflow](labs/Lab02-CI-workflow.md)
+  - Create a CI workflow that runs on every push to repo
+  - Execute the CI steps for the application in this repository
+  - Implement best practices for GitHub Actions
+    - Use SHA hashes for the actions you use
+    - Use the `actions/cache` action to cache dependencies
+    - Specify the node version to use
+    - Specify a matrix job to run the CI steps for multiple versions of node
+    - Show the test results from the unit tests in the GitHub UI
+  - Upload a Docker image to GitHub Packages (Container Registry)
+  - Create a release for the repository 
+
+# Application to work with
+The application in this repo is a simple Node.js application that provides a CRUD interface for maintaining a list of TODO items. It is designed to run in GitHub Codespaces.
 
 ## Getting Started
 
