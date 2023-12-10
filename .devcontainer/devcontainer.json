@@ -8,12 +8,17 @@
     }
   },
   "runArgs": [ "-u", "node" ],
-  "settings": { 
-    "terminal.integrated.shell.linux": "/bin/bash"
+  "customizations": {
+    "vscode": {
+      "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
   },
-  "extensions": [
-    "dbaeumer.vscode-eslint"
-  ],
   "postCreateCommand": "npm install",
   "forwardPorts": [ 3000 ]
 }
