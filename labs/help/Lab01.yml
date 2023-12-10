@@ -1,0 +1,18 @@
+on:
+  issue:
+    types: [opened, closed]
+  
+jobs: 
+  issue-ops:
+    runs-on: ubuntu-latest
+    steps:
+    # we don't need any source code, so we could skip the checkout action
+    # - uses: actions/checkout@v3
+
+    # but since we want to use the CLI, it needs a repo context
+    # we can create that by cloning manually, but the checkout action is way easier
+    - uses: actions/checkout@v3
+
+    - name: Create comment on issue
+      run: |
+        gh issue comment ${{ github.event.issue.number }} --body "Hello from the GitHub workflow"

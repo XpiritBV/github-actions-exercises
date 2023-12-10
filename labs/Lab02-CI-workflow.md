@@ -82,3 +82,26 @@ Showing the test results in the workflow run is a great way to get feedback on t
     permissions:
       write-all # needed for the test reporter check
 ```
+
+# 7. Upload the Docker image to GitHub Container Registry
+The application can be hosted in a Docker container. You can build the Docker image and upload it to the GitHub Container Registry. This allows you to use the Docker image in other workflows, or to deploy the Docker image to a Kubernetes cluster. This is part of the CI workflow as you deliver a versioned artifact that can be used in other workflows (whre you do the Continuous Deployment for example).
+
+1. Add the building of the Docker image to the CI workflow. Use this command: `docker build -t ghcr.io/<your-github-username>/nodejs-ci-workflow:latest .`
+1. Add the uploading of the Docker image to the CI workflow. Use this command: `docker push ghcr.io/<your-github-username>/nodejs-ci-workflow:latest`
+1. Information about how to use the GitHub Packages as a Container registry can be found [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry), incl. the scopes you need for the GITHUB_TOKEN.
+
+> [!IMPORTANT]
+> The goal is to have a successful build, and the workflow should build and upload the Docker image to the GitHub Container Registry. You can check if the image is uploaded by going to the GitHub Container Registry. Bonus points if you add a version tag to the Docker image and push that as well.
+
+# 8. Upload the repository registry to a GitHub Release
+Create a workflow file (or add a new job) that will create a release from the repository. This workflow should only run from the main branch. 
+
+> [!TIP]
+> 1. You can use the `actions/create-release` action to create a release. You can use the `actions/upload-release-asset` action to upload the Docker image to the release.
+> 1. Another option is to use the GitHub CLI to [create a release](https://cli.github.com/manual/gh_release_create).
+>
+> Try both!
+
+Bonus points: The workflow should create a release with the version number from the package.json file. 
+
+Bonus points: Create one or more PR's (manually) and let the release notes be generated from the PR's titles. See the effect.
