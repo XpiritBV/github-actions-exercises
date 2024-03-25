@@ -34,7 +34,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^3.0.1",
-    "webpack": "^5.67.0"
+    "webpack": "^5.91.0"
   },
   "devDependencies": {
     "chai": "^5.1.0",
